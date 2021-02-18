@@ -55,6 +55,7 @@ const quizHard = [
 
 ];
 
+
 var quizIndex = 0;
 
 
@@ -67,7 +68,7 @@ const falseButton =  document.getElementById("false_button");
 
 // // const quizz = {
 // //   easy:quizEasy,
-// //   normal:quizHard,
+// //   normal: quizHard,
 // //   hard: quizHard,
 // }
 
@@ -76,7 +77,7 @@ const falseButton =  document.getElementById("false_button");
 
 
 function getQuestion(){
-  document.querySelector('.numOfQ').innerText =quizHard[quizIndex].numberQ;
+  document.querySelector('.numOfQ').innerText = quizHard[quizIndex].numberQ;
   document.querySelector('.question').innerText =quizHard[quizIndex].question;
 }
 getQuestion();
@@ -227,7 +228,7 @@ const failed =() =>{
 
 trueButton.onclick =  function(){
 
-  if(catAttackStore.length<3 &&quizHard[quizIndex].answers[0] ===quizHard[quizIndex].correct && quizIndex<9){
+  if(catAttackStore.length<3 && quizHard[quizIndex].answers[0] === quizHard[quizIndex].correct && quizIndex<9){
     
     document.querySelector('#result').innerText = `Correct !`;
 
@@ -240,7 +241,7 @@ trueButton.onclick =  function(){
     const congrats = setTimeout(finish,1000);
   }
 
-  else if(quizHard[quizIndex].answers[0] !==quizHard[quizIndex].correct && catAttackStore.length<2){
+  else if(quizHard[quizIndex].answers[0] !== quizHard[quizIndex].correct && catAttackStore.length<2){
     catAttack();
     lifePoint();
    
@@ -261,7 +262,7 @@ trueButton.onclick =  function(){
 
  falseButton.onclick = function() {
  
-  if(catAttackStore.length<3 &&quizHard[quizIndex].answers[1] ===quizHard[quizIndex].correct && quizIndex<9){ 
+  if(catAttackStore.length<3 && quizHard[quizIndex].answers[1] === quizHard[quizIndex].correct && quizIndex<9){ 
     document.querySelector('#result').innerText = `Correct !`
     
     const timeOut = setTimeout(timeCount,1500);
@@ -272,7 +273,7 @@ trueButton.onclick =  function(){
       const congrats = setTimeout(finish,1000);
 
     }
-    else if(quizHard[quizIndex].answers[1] !==quizHard[quizIndex].correct && catAttackStore.length<2){
+    else if(quizHard[quizIndex].answers[1] !== quizHard[quizIndex].correct && catAttackStore.length<2){
       catAttack();
       lifePoint();
       
