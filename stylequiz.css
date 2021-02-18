@@ -15,9 +15,9 @@
   
   #quiz_wrapper{
     background:url(./image/nezumiwithbackground.png);
-    background-position:center ;     
     margin: 0 auto;
-    background-size: 1600px;
+    background-repeat: no-repeat;
+    background-size: 1500px;
   }
 
   #pointsante{
@@ -25,7 +25,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-   padding-top: 50px;
   }
 
 .active{
@@ -50,32 +49,30 @@
   }
 .numOfQ{
   color:#FB6565 ;
-  font-size: 400%;
+  font-size: 300%;
   padding-bottom:50px ;
 }
 
 .question{
   color:#FB6565 ;
-  font-size: 70px;
+  font-size: 200%;
   text-align: center;
 }
 
+.selection_container{
+  display: flex;
+  justify-content: space-around;
+position: relative ;
+}
 
-  .selection_container{
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+
+  .button_container{
+    width: 20%;
+    position:relative;
+    text-decoration: none;
+    color:  rgb(73, 58, 58);
   }
 
-.button{
-   font-size: 70px;
-   position:relative;
-   text-decoration: none;
-   color:  rgb(73, 58, 58);
-  }
-  .button:hover{
-    font-size: 75px;
-  }
 
 
 
@@ -91,13 +88,8 @@
     left: 35px;
   }
 
-  
-.pinkicon{
-  position: absolute;
-  width: 300px;
-}
 
-
+ 
 
 #chasingcat{
   width: 300px;
