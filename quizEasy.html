@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./stylequiz.css">
+  <script type="module" src="./quizEasy.js"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+
+  <title>cheese or die!</title>
+</head>
+<body>
+
+<section id="quiz_wrapper">
+
+<div id='pointsante'> 
+  <img src="./image/heart_blur.png" alt="" class="active">
+  <img src="./image/heart_blur.png" alt="" class="active">
+  <img src="./image/heart_blur.png" alt="" class="active">
+  <div class="countdown"><img class="timer" src="./image/kunsei_cheese.png" alt=""> 
+    <div id="countdown"></div></div>
+  
+</div>
+
+<div id="quiz_container">
+
+  <div id="question_wrapper">
+    <h2 class="numOfQ"></h2>
+    <p class="question"></p>
+</div>
+
+<h2 id="result" ></h2>
+
+
+<div class="selection_container">
+  
+  <div class="button_container">  <img id="true_button" src="./image/pink_icon.png" alt=""> <span class="true_span">TRUE</span></div>
+
+
+<div class="button_container"> <img id="false_button" src="./image/pink_icon.png" alt=""><span class="false_span">FALSE</span></div>
+ 
+</div>
+
+
+
+<img id="chasingcat" src="./image/cat_nezumi_oikakeru.png" alt="mouse_advance">
+</section>
+
+
+<embed name="selectMode" src=./music/LaidBack.mp3 loop="true" hidden="true" autostart="true">
+</body>
+</html>

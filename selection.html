@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./style.css">
@@ -24,26 +27,26 @@
 <section class="img_wrapper">
 
  
-  <a href="./quiz.html" class="img_container">
-    <img  id='easyMode' class="cheeseimg" src="./image/cheese_slice.png" alt="">
+  <span data-next-step="quizEasy.html" class="img_container">
+    <img  id='easyMode' data-sound="pika1" class="cheeseimg bounce-in-top" src="./image/cheese_slice.png" alt="">
   <h2>Slice <br>cheese<br><span>(easy)</span></h2>
-  </a>
+  </span>
 
-  <a href="./quiz.html"  class="img_container">
-    <img id='normalMode' class="cheeseimg" src="./image/cheese_camembert.png" alt="">
-  <h2>Camenbert cheese<br><span>(normal)</span></h2>
-  </a>
+  <span data-next-step="quizNormal.html"  class="img_container">
+    <img id='normalMode'  data-sound="pikachu2" class="cheeseimg bounce-in-top" src="./image/cheese_camembert.png" alt="">
+  <h2>Camenbert<br> cheese<br><span>(normal)</span></h2>
+  </span>
 
-  <a href="./quiz.html"  class="img_container">
-    <img id='hardMode' class="cheeseimg" src="./image/cheese_blue.png" alt="">
-  <h2>Bleu cheese<br><span>(hard)</span> </h2>
-  </a>
+  <span data-next-step="quizHard.html"  class="img_container">
+    <img id='hardMode' data-sound="pikapika3"  class="cheeseimg bounce-in-top" src="./image/cheese_blue.png" alt="">
+  <h2>Bleu<br> cheese<br><span>(hard)</span> </h2>
+  </span>
   
 </section>
 
 
 </section>
-
+<embed name="selectMode" src=./music/LaidBack.mp3 loop="true" hidden="true" autostart="true">
 
 </body>
 </html>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./stylequiz.css">
-  <script type="module" src="./quizNormal.js"></script>
+  <script type="module" src="./quizHard.js"></script>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
@@ -22,7 +22,9 @@
   <img src="./image/heart_blur.png" alt="" class="active">
   <img src="./image/heart_blur.png" alt="" class="active">
   <img src="./image/heart_blur.png" alt="" class="active">
-  <img class="timer" src="./image/kunsei_cheese.png" alt=""> 
+  <div class="countdown"><img class="timer" src="./image/kunsei_cheese.png" alt=""> 
+    <div id="countdown"></div></div>
+  
 </div>
 
 <div id="quiz_container">
@@ -37,10 +39,10 @@
 
 <div class="selection_container">
   
-  <div class="button_container">  <img id="true_button" src="./image/pink_icon.png" alt=""> <span>TRUE</span></div>
+  <div class="button_container">  <img id="true_button" src="./image/pink_icon.png" alt=""> <span class="true_span">TRUE</span></div>
 
 
-<div class="button_container"> <img id="false_button" src="./image/pink_icon.png" alt=""><span>FALSE</span></div>
+<div class="button_container"> <img id="false_button" src="./image/pink_icon.png" alt=""><span class="false_span">FALSE</span></div>
  
 </div>
 
@@ -50,6 +52,6 @@
 </section>
 
 
-
+<embed name="selectMode" src=./music/LaidBack.mp3 loop="true" hidden="true" autostart="true">
 </body>
 </html>
