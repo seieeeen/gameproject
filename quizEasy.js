@@ -84,13 +84,12 @@ getQuestion();
 
 const timeCount =() =>{ 
   document.getElementById('result').innerText ="";
-  quizIndex++;
   timeleft = 10;
-    getQuestion();
-    clearInterval(downloadTimer)
-  downloadTimer = setInterval(game, 1000)
+  downloadTimer = setInterval(game, 1000);
+  quizIndex++;
+  const getQuestionAfterTimer = setTimeout(getQuestion,1000)
+  
 }
-
 
 
 
@@ -105,13 +104,13 @@ function game(){
     document.getElementById("countdown").innerHTML = "Time<br>Up!";
     catAttack();
     lifePoint();
-    const timeOut = setTimeout(timeCount,1500);
+    const timeOut = setTimeout(timeCount,1000);
     }
    else if(timeleft <= 0 && catAttackStore.length>=2){
     clearInterval(downloadTimer);
     catAttack();
     lifePoint();
-      const youLoose = setTimeout(failed,2500);
+      const youLoose = setTimeout(failed,1000);
     
   } 
   
@@ -230,12 +229,12 @@ trueButton.onclick =  function(){
   if(catAttackStore.length<3 &&quizEasy[quizIndex].answers[0] ===quizEasy[quizIndex].correct && quizIndex<9){
     
     document.querySelector('#result').innerText = `Correct !`;
-
-    const timeOut = setTimeout(timeCount,1500);
+    clearInterval(downloadTimer);
+    const timeOut = setTimeout(timeCount,1000);
   
   } 
   
-  else if(quizIndex ===9){
+  else if(quizIndex ===9){ clearInterval(downloadTimer);
     document.querySelector('#result').innerText = `Cheeeeese !!`
     const congrats = setTimeout(finish,1000);
   }
@@ -243,11 +242,11 @@ trueButton.onclick =  function(){
   else if(quizEasy[quizIndex].answers[0] !==quizEasy[quizIndex].correct && catAttackStore.length<2){
     catAttack();
     lifePoint();
-   
-    const timeOut = setTimeout(timeCount,1500);
+    clearInterval(downloadTimer);
+    const timeOut = setTimeout(timeCount,1000);
   }
   else if(catAttackStore.length>=2)
-    {
+    { clearInterval(downloadTimer);
       lifePoint();
       catAttackStore.unshift("cat attack");
       document.querySelector('#result').innerText = `Cat killed you ...`
@@ -263,11 +262,11 @@ trueButton.onclick =  function(){
  
   if(catAttackStore.length<3 &&quizEasy[quizIndex].answers[1] ===quizEasy[quizIndex].correct && quizIndex<9){ 
     document.querySelector('#result').innerText = `Correct !`
-    
-    const timeOut = setTimeout(timeCount,1500);
+    clearInterval(downloadTimer);
+    const timeOut = setTimeout(timeCount,1000);
     
     } 
-    else if(quizEasy[quizIndex]===9){
+    else if(quizEasy[quizIndex]===9){ clearInterval(downloadTimer);
       document.querySelector('#result').innerText = `Cheeeeese !!`;
       const congrats = setTimeout(finish,1000);
 
@@ -275,16 +274,16 @@ trueButton.onclick =  function(){
     else if(quizEasy[quizIndex].answers[1] !==quizEasy[quizIndex].correct && catAttackStore.length<2){
       catAttack();
       lifePoint();
-      
-    const timeOut = setTimeout(timeCount,1500);
+      clearInterval(downloadTimer);
+    const timeOut = setTimeout(timeCount,1000);
       
     }
     else if(catAttackStore.length>=2)
-      {
+      { clearInterval(downloadTimer);
         lifePoint();
         catAttackStore.unshift("cat attack");
         document.querySelector('#result').innerText = `Cat killed you...`
-        const youLoose = setTimeout(failed,2500);
+        const youLoose = setTimeout(failed,1000);
       }
       
     }
