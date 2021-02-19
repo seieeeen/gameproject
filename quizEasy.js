@@ -234,7 +234,7 @@ trueButton.onclick =  function(){
   
   } 
   
-  else if(quizIndex ===9){ clearInterval(downloadTimer);
+  else if(quizIndex >=9){ clearInterval(downloadTimer);
     document.querySelector('#result').innerText = `Cheeeeese !!`
     const congrats = setTimeout(finish,1000);
   }
@@ -266,7 +266,7 @@ trueButton.onclick =  function(){
     const timeOut = setTimeout(timeCount,1000);
     
     } 
-    else if(quizEasy[quizIndex]===9){ clearInterval(downloadTimer);
+    else if(quizIndex >=9){ clearInterval(downloadTimer);
       document.querySelector('#result').innerText = `Cheeeeese !!`;
       const congrats = setTimeout(finish,1000);
 

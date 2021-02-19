@@ -230,24 +230,28 @@ trueButton.onclick =  function(){
   if(catAttackStore.length<3 && quizHard[quizIndex].answers[0] === quizHard[quizIndex].correct && quizIndex<9){
     
     document.querySelector('#result').innerText = `Correct !`;
+    
     clearInterval(downloadTimer);
     const timeOut = setTimeout(timeCount,1000);
   
   } 
   
-  else if(quizIndex ===9){ clearInterval(downloadTimer);
+  else if(quizIndex >=9){ 
+    
     document.querySelector('#result').innerText = `Cheeeeese !!`
     const congrats = setTimeout(finish,1000);
   }
 
   else if(quizHard[quizIndex].answers[0] !== quizHard[quizIndex].correct && catAttackStore.length<2){
+    
     catAttack();
     lifePoint();
     clearInterval(downloadTimer);
     const timeOut = setTimeout(timeCount,1000);
   }
   else if(catAttackStore.length>=2)
-    { clearInterval(downloadTimer);
+    { 
+      clearInterval(downloadTimer);
       lifePoint();
       catAttackStore.unshift("cat attack");
       document.querySelector('#result').innerText = `Cat killed you ...`
@@ -261,18 +265,22 @@ trueButton.onclick =  function(){
 
  falseButton.onclick = function() {
  
-  if(catAttackStore.length<3 && quizHard[quizIndex].answers[1] === quizHard[quizIndex].correct && quizIndex<9){ 
+  if(catAttackStore.length<3 && quizHard[quizIndex].answers[1] === quizHard[quizIndex].correct && quizIndex<9){
+   
     document.querySelector('#result').innerText = `Correct !`
     clearInterval(downloadTimer);
     const timeOut = setTimeout(timeCount,1000);
     
     } 
-    else if(quizHard[quizIndex]===9){ clearInterval(downloadTimer);
+    else if(quizIndex >=9){ 
+     
+      clearInterval(downloadTimer);
       document.querySelector('#result').innerText = `Cheeeeese !!`;
       const congrats = setTimeout(finish,1000);
 
     }
     else if(quizHard[quizIndex].answers[1] !== quizHard[quizIndex].correct && catAttackStore.length<2){
+     
       catAttack();
       lifePoint();
       clearInterval(downloadTimer);
@@ -280,7 +288,8 @@ trueButton.onclick =  function(){
       
     }
     else if(catAttackStore.length>=2)
-      { clearInterval(downloadTimer);
+      {
+        clearInterval(downloadTimer);
         lifePoint();
         catAttackStore.unshift("cat attack");
         document.querySelector('#result').innerText = `Cat killed you...`

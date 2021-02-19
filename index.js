@@ -15,6 +15,7 @@ cheeses.forEach((eachCheese) => {
         const audio = new Audio(`./music/${currentSound}.mp3`);
         audio.play();
         audio.addEventListener("ended", () => {
+            isAudioPlaying = false;
             window.location = nextStep;
         });
     }

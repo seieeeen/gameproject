@@ -314,6 +314,7 @@ width: 85%;
 }
 
 #return_top{
+  width: 300px;
   position: absolute;
   bottom:0; right: 0;
    z-index: 0;
@@ -323,15 +324,15 @@ width: 85%;
 }
 
 #return_top img{
-  width: 55%;
+  width: 80%;
 }
 #return_top img:hover{
-width: 65%;
+width: 85%;
 }
 
 #return_top span{
   position: absolute;
-  top: 80px; left: 30%;
+  top: 60px; left: 30%;
   font-size: 4em;
   -webkit-text-stroke:1px rgba(82, 72, 72, 0.8);
 }
